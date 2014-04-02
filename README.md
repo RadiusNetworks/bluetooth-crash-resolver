@@ -7,7 +7,7 @@ large number of unique devices.  It is rare for most users but can be problemati
 Bluetooth LE devices in the background (e.g. iBeacon-enabled apps), especially when these users
 are around Bluetooth LE devices that randomize their mac address.
 
-The core class that provides the functionality is [com.radiusnetworks.bluetooth.BluetoothCrashResolver.](https://github.com/RadiusNetworks/bluetooth-crash-resolver/blob/master/app/src/main/java/com/radiusnetworks/bluetooth/BluetoothCrashResolver.java).  Suggested improvements are strongly desired and feedback is encouraged.
+The core class that provides the functionality is [com.radiusnetworks.bluetooth.BluetoothCrashResolver.](https://github.com/RadiusNetworks/bluetooth-crash-resolver/blob/master/app/src/main/java/com/radiusnetworks/bluetooth/BluetoothCrashResolver.java) Suggested improvements are strongly desired and feedback is encouraged.
 
 The core class can both recover from crashes and prevent crashes from happening in the first place.  In order to 
 be able to prevent crashes, the module must be integrated in an app that does the BLE scans, and must make a call
