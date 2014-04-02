@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.radiusnetworks.bluetoothcrashresolver" >
+
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+    <application android:allowBackup="true"
+        android:name="com.radiusnetworks.bluetoothcrashresolver.BluetoothCrashResolverApplication"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:debuggable="false" >
+
+        <receiver android:name="com.radiusnetworks.bluetoothcrashresolver.StartupBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.radiusnetworks.bluetoothcrashresolver.MainActivity"
+            android:label="BLE Crash Resolver"
+            android:screenOrientation="portrait" >
+            <intent-filter android:label="BLE Crash Resolver">
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service android:name="com.radiusnetworks.bluetoothcrashresolver.DummyService" />
+
+    </application>
+
+
+</manifest>

@@ -1,0 +1,132 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.radiusnetworks.bluetoothcrashresolver.MainActivity">
+
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/imageView"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentStart="true"
+    android:src="@drawable/crashimage" />
+
+<TextView
+    android:id="@+id/attribution"
+    android:layout_below="@+id/imageView"
+    android:textColor="#0000FF"
+    android:text="Powered by Radius Networks.  Tap here for more info"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+
+
+<TextView
+    android:id="@+id/description"
+    android:layout_marginTop="10dp"
+    android:layout_below="@+id/attribution"
+    android:text="This app monitors for crashes of Android's bluetooth service, and clears the internal list of bluetooth addresses to make these crashes as rare as possible.\n\nIf you are experiening crashes more than once every 15 seconds, please shut down all other bluetooth apps then select Force Flush from the menu above."
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+
+<RelativeLayout
+    android:id="@+id/stats_line0"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#cccccc"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:layout_marginTop="20dp"
+    android:layout_below="@+id/description">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:text="Bluetooth State:"
+        android:id="@+id/bluetooth_state_label" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:text="UNKNOWN"
+        android:id="@+id/bluetooth_state"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
+
+<RelativeLayout
+    android:id="@+id/stats_line1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:layout_below="@+id/stats_line0">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:text="Crashes detected:"
+        android:id="@+id/crash_count_label" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:text="0"
+        android:id="@+id/crash_count"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
+<RelativeLayout
+    android:id="@+id/stats_line2"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#cccccc"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:layout_below="@+id/stats_line1">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:text="Recovery attempts:"
+        android:id="@+id/recovery_count_label" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:text="0"
+        android:id="@+id/recovery_count"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
+<RelativeLayout
+    android:id="@+id/stats_line3"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:layout_below="@+id/stats_line2">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:text="Last crash time:"
+        android:id="@+id/last_crash_time_label" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:text="2014/01/01 22:22:22"
+        android:id="@+id/last_crash_time"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
+
+
+</RelativeLayout>
