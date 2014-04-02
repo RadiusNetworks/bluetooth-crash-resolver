@@ -12,11 +12,15 @@ be able to prevent crashes, the module must be integrated in an app that does th
 to the class with each scan record received so it can keep track of how many unique devices are likely in Bluedroid's
 memory.
 
+This app is also available in the [Google Play Store(https://play.google.com/store/apps/details?id=com.radiusnetworks.bluetoothcrashresolver)].
+
+
 ##License  
 Apache 2.0 (Open Source)
 
 ##More details on the crash bug
 
 [Android Bug Report #67272](https://code.google.com/p/android/issues/detail?id=67272)
+
 [Android iBeacon Library Issue #16](https://github.com/RadiusNetworks/android-ibeacon-service/issues/16)
 
