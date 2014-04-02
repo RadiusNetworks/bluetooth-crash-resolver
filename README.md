@@ -12,7 +12,7 @@ be able to prevent crashes, the module must be integrated in an app that does th
 to the class with each scan record received so it can keep track of how many unique devices are likely in Bluedroid's
 memory.
 
-This app is also available in the [Google Play Store(https://play.google.com/store/apps/details?id=com.radiusnetworks.bluetoothcrashresolver)].
+This app is also available in the [Google Play Store](https://play.google.com/store/apps/details?id=com.radiusnetworks.bluetoothcrashresolver).
 
 
 ##License  
