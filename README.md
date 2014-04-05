@@ -49,3 +49,5 @@ Apache 2.0 (Open Source)
 
 [Android iBeacon Library Issue #16](https://github.com/RadiusNetworks/android-ibeacon-service/issues/16)
 
+[A Solution for Android Bluetooth Crashes](http://developer.radiusnetworks.com/2014/04/02/a-solution-for-android-bluetooth-crashes.html)
+
