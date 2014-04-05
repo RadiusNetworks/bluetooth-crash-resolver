@@ -18,6 +18,27 @@ The reference app that uses the core class in this project CANNOT prevent crashe
 
 This app is also available in the [Google Play Store](https://play.google.com/store/apps/details?id=com.radiusnetworks.bluetoothcrashresolver).
 
+##Integrating with your app
+
+If you have an app that does Bluetooth LE scans, then here are the steps you need to take to add this to your app to prevent crashes:
+
+1. Copy BluetoothCrashResolver.java into your codebase
+
+2. In whatever class does Bluetooth LE scanning, construct this object, call start(), and keep using the same object instance for as long as you keep doing scanning:
+
+    bluetoothCrashResolver = new BlutoothCrashResolver(this.getApplicationContext());
+    bluetoothCrashResolver.start();
+
+3. Whenever you get a scan callback, make a call like this, passing a reference to your your LeScanCallback object:
+
+    bluetoothCrashResolver.notifyScannedDevice(device, myLeScanCallback);
+
+4. When you stop scanning, call the stop method:
+
+    bluetoothCrashResolver.stop();
+
+By performing the steps above, the module will keep track of how many unique devices are seen, and when they approach the limit of 1990, it will stop doing LeScans, and command a flush of the list.  It will also save the list of recently seen devices to non-volatile storage, so if you stop scanning and start up again later (even after closing and reopening your app), it will resume counting from where it left off.
+
 
 ##License  
 Apache 2.0 (Open Source)
