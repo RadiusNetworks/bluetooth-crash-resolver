@@ -3,7 +3,6 @@ gen/
 doc/
 build/
 src/main/gen
-.gradle
 local.properties
 .metadata
 .DS_Store
@@ -16,3 +15,5 @@ local.properties
 proguard/*
 *.iws
 
+
+/.gradle/
