@@ -26,7 +26,7 @@ If you have an app that does Bluetooth LE scans, then here are the steps you nee
 
 2. In whatever class does Bluetooth LE scanning, construct this object, call start(), and keep using the same object instance for as long as you keep doing scanning:
 
-    bluetoothCrashResolver = new BlutoothCrashResolver(this.getApplicationContext());
+    bluetoothCrashResolver = new BluetoothCrashResolver(this.getApplicationContext());
     bluetoothCrashResolver.start();
 
 3. Whenever you get a scan callback, make a call like this, passing a reference to your your LeScanCallback object:
